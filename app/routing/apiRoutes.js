@@ -6,26 +6,26 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-    console.log(req.body.scores);
+    console.log(req.body.userAnswers);
 
-    // Receive user details (name, photo, scores)
+    // Receive user details (name, photo, userAnswers)
     var user = req.body;
 
-    // parseInt for scores
-    for(var i = 0; i < user.scores.length; i++) {
-      user.scores[i] = parseInt(user.scores[i]);
+    // parseInt for userAnswers
+    for(var i = 0; i < user.userAnswers.length; i++) {
+      user.userAnswers[i] = parseInt(user.userAnswers[i]);
     }
 
-    // default friend match is the first friend but result will be whoever has the minimum difference in scores
+    // default friend match is the first friend but result will be whoever has the minimum difference in userAnswers
     var roomateIndex = 0;
-    var minimumDifference = 40;
+    var minimumDifference = 50;
 
-    // in this for-loop, start off with a zero difference and compare the user and the ith friend scores, one set at a time
+    // in this for-loop, start off with a zero difference and compare the user and the ith friend userAnswers, one set at a time
     //  whatever the difference is, add to the total difference
     for(var i = 0; i < friends.length; i++) {
       var totalDifference = 0;
-      for(var j = 0; j < friends[i].scores.length; j++) {
-        var difference = Math.abs(user.scores[j] - friends[i].scores[j]);
+      for(var j = 0; j < friends[i].userAnswers.length; j++) {
+        var difference = Math.abs(user.userAnswers[j] - friends[i].userAnswers[j]);
         totalDifference += difference;
       }
 

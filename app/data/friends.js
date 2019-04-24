@@ -1,29 +1,34 @@
 var friends = [
 	{
-		name: "Randle McMurphy",
-		photo: "",
-		scores: [5, 1, 2, 3, 1, 2, 5, 1, 1, 1]
+		name: "R.P. McMurphy",
+		photo: "https://images-na.ssl-images-amazon.com/images/I/41K3liuu5VL._SY355_.jpg",
+		scores: [5, 1, 4, 4, 3, 5, 3, 3, 3, ]
 	},
 	{
-		name: "",
-		photo: "https://vignette2.wikia.nocookie.net/itsalwayssunny/images/f/f3/Square-Dee-Cheesy.jpg",
+		name: "Martini",
+		photo: "https://assets.mycast.io/characters/7499_normal.jpg?1506782378",
 		scores: [2, 5, 4, 1, 2, 3, 3, 2, 3, 3]
 	},
 	{
-		name: "Dennis",
-		photo: "https://vignette3.wikia.nocookie.net/itsalwayssunny/images/1/13/Dennis_%281%29.jpg",
+		name: "Dale Harding",
+		photo: "https://oneflewoverthecuckoos.weebly.com/uploads/2/5/6/3/25639630/934049009.jpg?425",
 		scores: [1, 1, 5, 3, 3, 5, 1, 2, 3, 4]
 	},
 	{
-		name: "Mac",
-		photo: "https://vignette3.wikia.nocookie.net/itsalwayssunny/images/5/5f/Mac_-_Season_8.jpg",
+		name: "Charlie Cheswick",
+		photo: "https://robertslooneybin.weebly.com/uploads/3/7/7/3/37730841/2104192_orig.jpg",
 		scores: [3, 1, 3, 5, 2, 3, 2, 2, 5, 5]
 	},
 	{
-		name: "Frank",
-		photo: "https://vignette3.wikia.nocookie.net/itsalwayssunny/images/f/fe/Season_7_-_Frank.jpg",
+		name: "Chief Bromden",
+		photo: "https://usercontent2.hubstatic.com/13641207_f520.jpg",
 		scores: [3, 1, 4, 4, 2, 4, 2, 5, 1, 3]
-	}
+    },
+    {
+		name: "Billy Bibbit",
+		photo: "https://behindtheasylumwalls.weebly.com/uploads/2/5/7/1/25719689/3992749.jpg?253",
+		scores: [3, 1, 3, 5, 2, 3, 2, 2, 5, 5]
+	},
 ];
 
 module.exports = friends;
