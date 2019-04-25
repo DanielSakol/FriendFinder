@@ -8,12 +8,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //routes
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
-  });
-app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "survey.html"));
-  });
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 // listen
 app.listen(PORT, function() {
