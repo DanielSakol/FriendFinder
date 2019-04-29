@@ -17,7 +17,7 @@ module.exports = function(app) {
     }
 
     // default friend match is the first friend but result will be whoever has the minimum difference in userAnswers
-    var roomateIndex = 0;
+    var roommateIndex = 0;
     var minimumDifference = 50;
 
     // in this for-loop, start off with a zero difference and compare the user and the ith friend userAnswers, one set at a time
@@ -31,7 +31,7 @@ module.exports = function(app) {
 
       // if there is a new minimum, change the best friend index and set the new minimum for next iteration comparisons
       if(totalDifference < minimumDifference) {
-        roomateIndex = i;
+        roommateIndex = i;
         minimumDifference = totalDifference;
       }
     }
@@ -40,6 +40,6 @@ module.exports = function(app) {
     friends.push(user);
 
     // send back to browser the best friend match
-    res.json(friends[roomateIndex]);
+    res.json(friends[roommateIndex]);
   });
 };

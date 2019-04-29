@@ -10,7 +10,7 @@
     
 	<div class="container content">
 		<h1>Patient Survey</h1>
-		<p>This survey is required for patient roomate placement in the Oregon State Hospital</p>
+		<p>This survey is required for patient roommate placement in the Oregon State Hospital</p>
 		<form>
 			<div class="form-group">
 				<input id="name" type="text" class="form-control" placeholder="Name (Required)">
@@ -105,7 +105,7 @@
                 </fieldset>
             </div>
             <div class="form-group">
-                <label for="question8">8. I prefer to have a roomate who is a non-smoker:</label>
+                <label for="question8">8. I prefer to have a roommate who is a non-smoker:</label>
                 <br>
                 <fieldset id="q8">
                       <input type="radio" value="1" name="a8"> 1: Strongly Disagree<br>
@@ -144,9 +144,9 @@
 
 	<footer>
 		<div class="container">
-			<a href="/home">Oregon State Hospital Roomate Finder</a>
+			<a href="/home">Oregon State Hospital roommate Finder</a>
 			<span>|</span>
-			<a href="https://github.com/yoonslee/FriendFinder">GitHub Repo</a>
+			<a href="https://github.com/danielsakol/FriendFinder">GitHub Repo</a>
 		</div>
 	</footer>
 
@@ -180,13 +180,15 @@
 				]
             };
         console.log(newPatient)
-        var currentURL = window.location.origin;
-			// Ajax call for receiving response after POST req
-			$.post(currentURL + "/api/friends", newPatient, function(data) {
-				$("#chosenRoomate").text(data.name);
-				$("#chosenRoomatePic").attr("src", data.photo);
-				$("#myModal").modal("toggle");
-			});
+
+
+        // var currentURL = window.location.origin;
+		// 	// Ajax call for receiving response after POST req
+		// 	$.post(currentURL + "/api/friends", newPatient, function(data) {
+		// 		$("#chosenroommate").text(data.name);
+		// 		$("#chosenroommatePic").attr("src", data.photo);
+		// 		$("#myModal").modal("toggle");
+			//});
         //form validation
        function validateForm() {
        var isValid = true;
@@ -202,26 +204,26 @@
        });
        return isValid;
      }
-    //     $.post("/api/friends", newPatient,
-    //     function(data) {
-    //      // If and else for post????????????????????????????????????????????
+        $.post("/api/friends", newPatient,
+        function(data) {
+         // If and else for post????????????????????????????????????????????
           
 
-    //     // Clear the form when submitting
-    //     $("#name").val(""),
-	//     $("#photo").val(""),
-    //     $("#q1").val(""),
-	// 	$("#q2").val(""),
-	// 	$("#q3").val(""),
-	// 	$("#q4").val(""),
-	// 	$("#q5").val(""),
-	// 	$("#q6").val(""),
-	// 	$("#q7").val(""),
-	// 	$("#q8").val(""),
-	// 	$("#q9").val(""),
-	// 	$("#q10").val("")
+        // Clear the form when submitting
+        $("#name").val(""),
+	    $("#photo").val(""),
+        $("#q1").val(""),
+		$("#q2").val(""),
+		$("#q3").val(""),
+		$("#q4").val(""),
+		$("#q5").val(""),
+		$("#q6").val(""),
+		$("#q7").val(""),
+		$("#q8").val(""),
+		$("#q9").val(""),
+		$("#q10").val("")
 
-    //   });
+      });
 
   });
 </script>
@@ -250,16 +252,17 @@ body {font-family: "Arial Black, Gadget, sans-serif";}
   padding: 15px;
   border: 1px solid #888;
   width: 80%;
+  height: 50%;
   box-shadow: 4px 4px;
-  background: rgb(192, 43, 43) 
-  url("https://media.giphy.com/media/12KwB9vNR7KWZO/giphy.gif")
-  75% 50% 
+  background: rgb(83, 91, 201) 
+  url("https://media.giphy.com/media/3oEjHHwTuVTDDZoPQI/giphy.gif")
+  75% 10% 
   no-repeat;
 }
 
 /* Close Button */
 .close {
-  color: #ffffff;
+  color: #000000;
   float: right;
   font-size: 35px;
   font-weight: bold;
@@ -267,7 +270,7 @@ body {font-family: "Arial Black, Gadget, sans-serif";}
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: rgb(34, 53, 226);
   text-decoration: none;
   cursor: pointer;
 }
@@ -284,10 +287,9 @@ body {font-family: "Arial Black, Gadget, sans-serif";}
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h2 id="chosenRoomate"></h2>
-    <img id="chosenRoomatePic" src="#">
-    <p>Your roomate is:
-    <br><strong>PICK A MOVIE or SHOW</strong></p>
+    <h2 id="chosenroommate"></h2>
+    <img id="chosenroommatePic" src="#">
+    <p><strong>Your New Roommate:</strong></p>
   </div>
 </div>
 
